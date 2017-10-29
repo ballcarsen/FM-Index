@@ -56,6 +56,7 @@ class FM:
         print(self.BW)
         print(sub)
         return(sub.count(char))
+    #backwards pattern matching
     def backwards(self,pattern):
         sp = self.c[pattern[len(pattern - 1)]]
         print(sp)
