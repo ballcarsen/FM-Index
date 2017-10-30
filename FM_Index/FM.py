@@ -17,6 +17,7 @@ class FM:
             print(substrings[i])
         #Sorts suffixs by lexigraphical order
         substrings.sort()
+        '''
         temp = {}
         #adds to the dictionary, to create new arrays of for each suffix starting with a particular character
         for k in range(len(substrings) - 1):
@@ -34,7 +35,9 @@ class FM:
             for k in temp_arr:
                 #adds suffixs in lexigraphical order and length
                 substrings.append(k)
+        '''
         print(substrings)
+
         for k in substrings:
             t = re.sub("[^0-9]", "", k)
             ind = int(t)
@@ -90,7 +93,7 @@ class FM:
 
 
 if 'name == __main__' :
-    fm1 = FM("mississippi$")
+    fm1 = FM("aaaaaaaaaacgaaaaaacgaaacgaaacgaaatcgaat$")
     fm1.bw()
     fm1.char_count()
-    fm1.backwards('si')
+    fm1.backwards('cg')
